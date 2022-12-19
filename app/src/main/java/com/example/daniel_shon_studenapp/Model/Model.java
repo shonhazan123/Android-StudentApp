@@ -6,14 +6,13 @@ import java.util.List;
 
 public class Model {
 
-    private static Model _instance = null;
-    List<Student> studentList = new LinkedList<>(); // data is a list of students
+    private static Model instance = null;
 
-    public Model getModel(){
-        if(_instance == null){
-            _instance = new Model();
+    public static Model getModel(){
+        if(instance == null){
+            instance = new Model();
         }
-        return  _instance;
+        return  instance;
     }
 
     private Model(){
@@ -26,6 +25,7 @@ public class Model {
     public void deleteStudent(int index){ // delete student at position pos
         studentList.remove(index);
     }
+    List<Student> studentList = new LinkedList<>();
     public List<Student> getAllStudents(){ // return all students
         return studentList;
     }
