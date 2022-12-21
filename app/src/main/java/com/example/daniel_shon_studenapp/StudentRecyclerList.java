@@ -35,17 +35,17 @@ public class StudentRecyclerList extends AppCompatActivity{
 
         data = Model.getModel().getAllStudents(); // get the data from the model
 
-        list = findViewById(R.id.studentrecycler_list); // find the studentrecycler_list RecyclerView
+        list = findViewById(R.id.studentrecycler_list);
 
-        list.setHasFixedSize(true); // set the list to have a fixed size
+        list.setHasFixedSize(true);
 
-        list.setLayoutManager(new LinearLayoutManager(this)); //define the recycler view to be a list
+        list.setLayoutManager(new LinearLayoutManager(this));
 
-        adapter = new StudentRecyclerAdapter(); // create a new adapter
+        adapter = new StudentRecyclerAdapter();
 
-        list.setAdapter(adapter); // set the adapter to the recycler view
+        list.setAdapter(adapter);
 
-        add=findViewById(R.id.studentRecycler_add_btn2); // find the studentRecycler_add_btn2 ImageButton
+        add=findViewById(R.id.studentRecycler_add_btn2);
 
         add.setOnClickListener(view->{
             Intent addStudentIntent = new Intent(this,AddStudentActivity.class); // create a new intent to the AddStudentActivity
